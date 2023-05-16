@@ -1,0 +1,30 @@
+{
+    "name": "Logan Reuter",
+    "subheading": "A Mechanical Engineering Student",
+
+    "about": "I am a third year student at UC Davis studying mechanical engineering.",
+    "skills": [
+        "programming"
+    ],
+    "hobbies": [
+        "programming",
+        "video games",
+        "building things"
+    ],
+    "clubs": [
+        "UC Davis Robosub"
+    ],
+
+    "projects": [],
+
+    "resumeURL": "",
+    "education": [],
+    "experience": [],
+
+    "email": "lareuter@ucdavis.edu",
+    "phone": "(707) 328-1349",
+    "links": {
+        "github": "https://github.com/lreuter2020/",
+        "linkedin": "https://www.linkedin.com/in/logan-reuter/"
+    }
+}
