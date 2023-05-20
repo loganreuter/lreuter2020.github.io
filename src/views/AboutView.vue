@@ -6,7 +6,7 @@
       <div class="info">
         <h1>Meet Logan</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque fugiat praesentium quidem minus veniam quaerat. Qui nesciunt velit omnis maiores alias voluptatibus officiis id architecto. Consequuntur obcaecati magni fugit rem.
+          {{$store.state.info.about}}
         </p>
         <div class="info-tabs">
           <span class="skills tab" :class="{active: activeTab == 'skills'}" @click="openTab('skills')">
@@ -24,19 +24,13 @@
         </div>
         <div class="info-text">
           <ul id="skills" class="text" :class="{active: activeTab == 'skills'}">
-            <li>skill #1</li>
-            <li>skill #2</li>
-            <li>skill #3</li>
+            <li v-for="(skill, index) in $store.state.info.skills" :key="index">{{skill}}</li>
           </ul>
           <ul id="hobbies" class="text" :class="{active: activeTab == 'hobbies'}">
-            <li>hobby #1</li>
-            <li>hobby #2</li>
-            <li>hobby #3</li>
+            <li v-for="(hobby, index) in $store.state.info.hobbies" :key="index">{{hobby}}</li>
           </ul>
           <ul id="clubs" class="text" :class="{active: activeTab == 'clubs'}">
-            <li>
-              Club
-            </li>
+            <li v-for="(club, index) in $store.state.info.clubs" :key="index">{{club}}</li>
           </ul>
         </div>
       </div>
@@ -93,6 +87,17 @@ export default {
     min-width: 12rem;
     background-color: rgba(var(--background-color), 0.5);
     border-radius: 5px;
+
+    &::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url("../assets/about_photo.png");
+      background-position-x: center;
+      opacity: 0.9;
+      // background-position-y: bottom;
+    }
   }
 
   .info{

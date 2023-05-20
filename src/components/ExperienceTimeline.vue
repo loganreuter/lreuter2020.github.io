@@ -14,29 +14,8 @@ export default {
   components: {
     TimelineTile
   },
-  data(){
-    return{
-      experience: [
-        {
-          title: "Undergrad Researcher",
-          company: "ARMS Lab",
-          startDate: "May 2023",
-          endDate: "Present"
-        },
-        {
-          title: "Robotic Intern",
-          company: "CSTEM Lab",
-          startDate: "June, 2019",
-          endDate: "August 2021",
-        },
-        {
-          title: "Engineering Intern",
-          company: "KVAL inc",
-          startDate: "June, 2019",
-          endDate: "August 2021",
-        }
-      ]
-    }
+  props: {
+    experience: Object
   },
 }
 </script>
@@ -47,7 +26,7 @@ export default {
       flex-flow: column;
       justify-content: center;
       align-items: center;
-      height: 40rem;
+      height: 25rem;
       position: relative;
 
       .line{

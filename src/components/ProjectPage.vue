@@ -2,7 +2,7 @@
   <div class="project-page">
     <div class="header">
         <div class="title">
-            <h1>Title {{project}}</h1>
+            <h1>{{project.title}}</h1>
         </div>
         <div class="subheading">
             <h2>

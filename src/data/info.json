@@ -4,22 +4,82 @@
 
     "about": "I am a third year student at UC Davis studying mechanical engineering.",
     "skills": [
-        "programming"
+        "Programming"
     ],
     "hobbies": [
-        "programming",
-        "video games",
-        "building things"
+        "Programming",
+        "Video games",
+        "Building things"
     ],
     "clubs": [
         "UC Davis Robosub"
     ],
 
-    "projects": [],
+    "projects": [
+        {
+            "title": "A/C System",
+            "description": "The final project for my mechatronics course at UC Davis. The user has the ability to control the system in either automatic or manual mode."
+        
+        },
+        {
+            "title": "Desk Organizer"
+        },
+        {
+            "title": "Book Ends"
+        },
+        {
+            "title": "Air Quality Sensor"
+        },
+        {
+            "title": "Light Meter Project"
+        },
+        {
+            "title": "Totem"
+        },
+        {
+            "title": "Gyroscope"
+        }
+    ],
 
-    "resumeURL": "",
-    "education": [],
-    "experience": [],
+    "resumeURL": "https://docs.google.com/document/d/1xEH-e9hLloairw4vq5VxfgN-dFNDhdVe4Jimlbj5YYc/export?format=pdf",
+    "education": [
+        {
+            "importance": 1,
+            "school": "University of California, Davis",
+            "level": "B.S.",
+            "degree": "Mechanical Engineering",
+            "obtained": false,
+            "endDate": "June 2024"
+        },
+        {
+            "importance": 0,
+            "school": "University of California, Davis",
+            "level": "Minor",
+            "degree": "Computer Science",
+            "obtained": false,
+            "endDate": "June 2024"
+        }
+    ],
+    "experience": [
+        {
+          "title": "Undergrad Researcher",
+          "company": "ARMS Lab",
+          "startDate": "May 2023",
+          "endDate": "Present"
+        },
+        {
+          "title": "Robotic Intern",
+          "company": "CSTEM Lab",
+          "startDate": "April 2022",
+          "endDate": "May 2022"
+        },
+        {
+          "title": "Engineering Intern",
+          "company": "KVAL inc",
+          "startDate": "June 2019",
+          "endDate": "August 2021"
+        }
+    ],
 
     "email": "lareuter@ucdavis.edu",
     "phone": "(707) 328-1349",

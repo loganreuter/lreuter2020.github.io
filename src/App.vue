@@ -11,6 +11,9 @@ export default {
   name: "app",
   components: {
     NavBar,
+  },
+  created(){
+    this.$store.dispatch("loadInfo");
   }
 }
 </script>
@@ -26,10 +29,10 @@ export default {
  --text-color: #fff;
 }
 
-// *{
-//   border: 1px dashed red;
-//   box-sizing: border-box;
-// }
+*{
+  // border: 1px dashed red;
+  box-sizing: border-box;
+}
 
 html{
   height: -webkit-fill-available;

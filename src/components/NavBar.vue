@@ -1,19 +1,19 @@
 <template>
   <nav class="nav" :class="{hidden: isHidden}">
     <span class="logo nav-link">ЯL</span>
-    <span class="nav-link" @click="scrollTo('home')">
+    <span class="nav-link" :class="{active: activeSection == 'home'}" @click="scrollTo('home')">
         Home
     </span>
-    <span class="nav-link" @click="scrollTo('about')">
+    <span class="nav-link" :class="{active: activeSection == 'about'}" @click="scrollTo('about')">
         About Me
     </span>
-    <span class="nav-link" @click="scrollTo('projects')">
+    <span class="nav-link" :class="{active: activeSection == 'projects'}" @click="scrollTo('projects')">
         Projects
     </span>
-    <span class="nav-link" @click="scrollTo('resume')">
+    <span class="nav-link" :class="{active: activeSection == 'resume'}" @click="scrollTo('resume')">
         Resume
     </span>
-    <span class="nav-link" @click="scrollTo('contact')">
+    <span class="nav-link" :class="{active: activeSection == 'contact'}" @click="scrollTo('contact')">
         Contact Me
     </span>
   </nav>
@@ -24,22 +24,26 @@ export default {
     name: "NavBar",
     data(){
         return{
-            isHidden: false
+            isHidden: false,
+            activeSection: "home"
         }
     },
     created(){
         this.unsubscribe = this.$store.subscribe((mutation, state) => {
             if(mutation.type == 'updateProjectOpen'){
-                console.log(`new ${state.projectOpen}`);
                 this.isHidden = state.projectOpen;
+            }
+
+            if(mutation.type == 'updateSection'){
+                this.activeSection = state.currentSection;
             }
         })
     },
     methods: {
         scrollTo(t){
-            console.log(t);
-            console.log(document.getElementById(t));
-            document.getElementById(t).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest"});
+            // console.log(t);
+            // console.log(document.getElementById(t));
+            document.getElementById(t).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest"});
         }
     }
 }
@@ -69,9 +73,15 @@ export default {
                 margin-right:  auto;
             }
 
-            &:not(.logo):not(.active):hover{
+            &:not(.logo):hover{
                 cursor: pointer;
-                color: rgba(var(--light-purple), 0.85);
+
+                &:not(.active){
+                    filter: brightness(0.85);
+                }
+            }
+            &.active{
+                color: rgba(var(--light-purple), 1);
             }
         }
 

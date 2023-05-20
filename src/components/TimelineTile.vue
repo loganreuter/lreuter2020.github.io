@@ -23,7 +23,6 @@ export default {
     },
     created(){
         this.side = (getCurrentInstance().vnode.key % 2) ? "right" : "left";
-        console.log(this.side)
     }
 }
 </script>

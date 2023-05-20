@@ -8,11 +8,18 @@
 export default {
     name: "ProjectSlider",
     props: {
-        numOfProjects: Number
+        numOfProjects: Number,
+        position: Number
     },
     data(){
         return {
             target: 0,
+        }
+    },
+    watch: {
+        position(n) {
+            this.target = n;
+            this.$refs.slider.style.setProperty("--slider-height", `${100 * ((this.target) / (this.$props.numOfProjects - 1))}%`);
         }
     },
     methods: {
@@ -71,7 +78,6 @@ export default {
                 cursor: pointer;
                 filter: brightness(0.75);
             }
-
         }
 
         &::before{
