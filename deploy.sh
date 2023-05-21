@@ -1,8 +1,8 @@
-npm run build
-
 git add -A
 git commit -m "deployed"
 git push origin main
+
+npm run build
 
 cd dist
 echo "www.loganreuter.com" >> CNAME
